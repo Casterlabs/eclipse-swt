@@ -17,20 +17,22 @@ do
 
     echo ------------------------
 
-    if [ ! -d cache/$itemName ] 
+    if [ -d cache/$itemName ] 
     then
-        echo Downloading $filename to $itemName
+        echo Skipping $itemName
+    else
+        echo Downloading $itemName
 
         mkdir cache/$itemName
         wget -O cache/$filename $MIRROR$item
         unzip -d cache/$itemName cache/$filename
         rm cache/$filename
-    fi
 
-    version=`echo $itemName | cut -d "-" -f2`
-    artifactId=`echo $itemName | cut -d "-" -f3`.`echo $itemName | cut -d "-" -f4`.`echo $itemName | cut -d "-" -f5`
+        version=`echo $itemName | cut -d "-" -f2`
+        artifactId=`echo $itemName | cut -d "-" -f3`.`echo $itemName | cut -d "-" -f4`.`echo $itemName | cut -d "-" -f5`
 
-    echo Installing $artifactId:$version
+        echo Installing $artifactId:$version
 
-    sh install.sh "cache/$itemName/swt.jar" "cache/$itemName/src.zip" $artifactId $version 
+        sh install.sh "cache/$itemName/swt.jar" "cache/$itemName/src.zip" $artifactId $version 
+    fi;
 done;
