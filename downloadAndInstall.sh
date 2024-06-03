@@ -1,9 +1,11 @@
 #!/bin/bash
 
+set -e
+rm -rf cache
+mkdir -p cache
 
 # Full URL Format:
 # https://mirror.umd.edu/eclipse/eclipse/downloads/drops4/R-4.22-202111241800/swt-4.22-win32-win32-x86_64.zip
-
 
 MIRROR='https://mirror.umd.edu/eclipse/eclipse/downloads/drops4/'
 

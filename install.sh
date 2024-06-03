@@ -8,7 +8,7 @@ VERSION=$4
 DIR=`pwd`/maven
 
 mvn deploy:deploy-file \
-		-Durl=file://$DIR \
+		-Durl=file:/$DIR \
 		-Dsources=$SRC \
 		-Dfile=$FILE \
 		-DgroupId=org.eclipse.swt \
