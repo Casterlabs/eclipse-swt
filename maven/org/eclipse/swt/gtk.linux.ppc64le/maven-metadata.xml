@@ -3,10 +3,10 @@
   <groupId>org.eclipse.swt</groupId>
   <artifactId>gtk.linux.ppc64le</artifactId>
   <versioning>
-    <release>4.31</release>
+    <release>4.22</release>
     <versions>
-      <version>4.31</version>
+      <version>4.22</version>
     </versions>
-    <lastUpdated>20240603125506</lastUpdated>
+    <lastUpdated>20220217042338</lastUpdated>
   </versioning>
 </metadata>
